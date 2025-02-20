@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PROGRESS-PRIDE-FLAG_0: -487971201386537189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
