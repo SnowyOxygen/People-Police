@@ -89646,6 +89646,11 @@ PrefabInstance:
       propertyPath: m_LinearDamping
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3148737395947943933, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7478454283209214762, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
         type: 3}
       propertyPath: m_Name
@@ -89729,6 +89734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 24.2
+  _camera: {fileID: 519420031}
 --- !u!4 &6110495022275950314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8748073606529911965, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
