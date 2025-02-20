@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Modele2D : MonoBehaviour
+public class Modele2DEnnemi : MonoBehaviour
 {
     [SerializeField] private Modele2DConfiguration _configuration;
     public Vector2 _direction;
