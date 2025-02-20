@@ -88123,7 +88123,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.36
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -89775,24 +89775,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1416789205748578065, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+    - target: {fileID: 1716422413710909545, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
         type: 3}
-      propertyPath: m_Constraints
-      value: 4
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 4708109407358843021, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1416789205748578065, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+    - target: {fileID: 4708109407358843021, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
         type: 3}
-      propertyPath: m_GravityScale
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708109407358843021, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+        type: 3}
+      propertyPath: CollisionModule.collisionMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1416789205748578065, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
+    - target: {fileID: 4708109407358843021, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
         type: 3}
-      propertyPath: m_LinearDamping
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148737395947943933, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
-        type: 3}
-      propertyPath: m_FlipX
+      propertyPath: CollisionModule.m_Planes.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7478454283209214762, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
@@ -89853,32 +89858,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7478454283209214762, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6110495022275950313}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b, type: 3}
---- !u!1 &6110495022275950312 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7478454283209214762, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6110495022275950311}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6110495022275950313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110495022275950312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10343f8392705542aea16ef9f7ef716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 24.2
-  _camera: {fileID: 519420031}
 --- !u!4 &6110495022275950314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8748073606529911965, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b,
