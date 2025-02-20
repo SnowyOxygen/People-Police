@@ -4,8 +4,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     [Range(1, 100)] private float _speed;
+    [SerializeField] private Camera _camera;
 
     private Rigidbody2D _rb;
+    private SpriteRenderer _sprite;
 
     private Vector2 movement = Vector2.zero;
 
@@ -13,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _sprite = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -21,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Move();
         }
+
+        PointAtCursor();
     }
 
     // Update is called once per frame
@@ -37,5 +42,36 @@ public class PlayerMovement : MonoBehaviour
         Vector2 direction = movement.normalized;
         Vector2 force = direction * Time.deltaTime * _speed * 100;
         _rb.AddForce(force);
+    }
+
+    private void PointAtCursor()
+    {
+        // Get the mouse position in screen coordinates.
+        Vector3 mousePosition = Input.mousePosition;
+
+        // Convert the screen coordinates to world coordinates.
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        // Ensure the z-coordinate is the same as the sprite's z-coordinate.
+        worldMousePosition.z = transform.position.z;
+
+        // Calculate the direction from the sprite to the mouse.
+        Vector3 direction = worldMousePosition - transform.position;
+
+        // Calculate the angle in degrees.
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Rotate the sprite to face the mouse.
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        // Flip the sprite based on the mouse's horizontal position relative to the sprite.
+        if (direction.x >= 0) // Mouse is to the right or directly above/below.
+        {
+            _sprite.flipY = false; // Don't flip
+        }
+        else // Mouse is to the left.
+        {
+            _sprite.flipY = true; // Flip horizontally
+        }
     }
 }
