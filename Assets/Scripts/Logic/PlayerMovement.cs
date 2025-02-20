@@ -64,14 +64,5 @@ public class PlayerMovement : MonoBehaviour
         // Rotate the sprite to face the mouse.
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        // Flip the sprite based on the mouse's horizontal position relative to the sprite.
-        if (direction.x >= 0) // Mouse is to the right or directly above/below.
-        {
-            _sprite.flipY = false; // Don't flip
-        }
-        else // Mouse is to the left.
-        {
-            _sprite.flipY = true; // Flip horizontally
-        }
     }
 }
