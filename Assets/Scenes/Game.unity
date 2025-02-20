@@ -89760,6 +89760,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3148737395947943933, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7478454283209214762, guid: 7d8d1a58b9e04ea448327f4ff4e4a81b, type: 3}
       propertyPath: m_Name
       value: Player
